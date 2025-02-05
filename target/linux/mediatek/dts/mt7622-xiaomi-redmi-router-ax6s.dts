@@ -146,8 +146,9 @@
 
 		phy-connection-type = "2500base-x";
 
-		nvmem-cells = <&macaddr_factory_4 (-1)>;
+		nvmem-cells = <&macaddr_factory_4>;
 		nvmem-cell-names = "mac-address";
+		mac-address-increment = <(-1)>;
 
 		fixed-link {
 			speed = <2500>;
@@ -195,7 +196,6 @@
 
 				port@6 {
 					reg = <6>;
-					label = "cpu";
 					ethernet = <&gmac0>;
 					phy-mode = "2500base-x";
 
@@ -268,16 +268,12 @@
 				reg = <0x1c0000 0x80000>;
 				read-only;
 
-				nvmem-layout {
-					compatible = "fixed-layout";
-					#address-cells = <1>;
-					#size-cells = <1>;
+				compatible = "nvmem-cells";
+				#address-cells = <1>;
+				#size-cells = <1>;
 
-					macaddr_factory_4: macaddr@4 {
-						compatible = "mac-base";
-						reg = <0x4 0x6>;
-						#nvmem-cell-cells = <1>;
-					};
+				macaddr_factory_4: macaddr@4 {
+					reg = <0x4 0x6>;
 				};
 			};
 
@@ -298,7 +294,7 @@
 			 */
 			partition@2c0000 {
 				label = "kernel";
-				reg = <0x2c0000 0x600000>;
+				reg = <0x2c0000 0x400000>;
 			};
 
 			/* ubi partition is the result of squashing
@@ -308,9 +304,9 @@
 			 * - overlay
 			 * - obr
 			 */
-			partition@8c0000 {
+			partition@6c0000 {
 				label = "ubi";
-				reg = <0x8c0000 0x6d00000>;
+				reg = <0x6C0000 0x6f00000>;
 			};
 		};
 	};

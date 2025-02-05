@@ -1,0 +1,41 @@
+From d49a28094294a731462661e3e00c59b4f4b5aa5a Mon Sep 17 00:00:00 2001
+From: coolsnowwolf <coolsnowwolf@gmail.com>
+Date: Fri, 31 Jan 2025 15:55:16 +0800
+Subject: [PATCH] kernel: bump 5.x to latest HEAD
+
+---
+ include/kernel-5.10 | 4 ++--
+ include/kernel-5.15 | 4 ++--
+ include/kernel-5.4  | 4 ++--
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/include/kernel-5.10 b/include/kernel-5.10
+index dd6ed3eb7..6bab1fbe0 100644
+--- a/include/kernel-5.10
++++ b/include/kernel-5.10
+@@ -1,2 +1,2 @@
+-LINUX_VERSION-5.10 = .232
+-LINUX_KERNEL_HASH-5.10.232 = fda44589a438dff8c718082e9a48843b15e5eb82f6cc2f98d48f48226063bef0
++LINUX_VERSION-5.10 = .233
++LINUX_KERNEL_HASH-5.10.233 = 239e57280f8c9159187e383d7b730d29f5cc8e1b30be218f004e0c90d1137f52
+diff --git a/include/kernel-5.15 b/include/kernel-5.15
+index 40607b7b3..e546a4d87 100644
+--- a/include/kernel-5.15
++++ b/include/kernel-5.15
+@@ -1,2 +1,2 @@
+-LINUX_VERSION-5.15 = .175
+-LINUX_KERNEL_HASH-5.15.175 = 8fd8bbc80e7aae30aaca3b40576b283010b5e84e70f6fea1573589155ce8a9d0
++LINUX_VERSION-5.15 = .177
++LINUX_KERNEL_HASH-5.15.177 = ea9eb8088d4231f8a01b191ceef5f4d92238f6c7519f6fbcb57e448ee9e0a6e0
+diff --git a/include/kernel-5.4 b/include/kernel-5.4
+index 5d2d36d09..ea7dbd011 100644
+--- a/include/kernel-5.4
++++ b/include/kernel-5.4
+@@ -1,2 +1,2 @@
+-LINUX_VERSION-5.4 = .288
+-LINUX_KERNEL_HASH-5.4.288 = 876fbae303723bcf9e01ab57b1a0a7d38045aacd481ff865dccc2cc89f591afe
++LINUX_VERSION-5.4 = .289
++LINUX_KERNEL_HASH-5.4.289 = 1e3e5fc052c8e15f8eaa37d30bf4f0b3eef7430dd234d9fed0d0005852a06d10
+-- 
+2.46.0.windows.1
+
